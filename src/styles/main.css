@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* navbar */
+
+nav {
+  display: flex;
+  background-color: #41644a;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand a {
+  text-decoration: none;
+  color: white;
+}
+.nav-restaurant a {
+  color: white;
+  font-size: 2rem;
+}
+
+.nav-restaurant ul {
+  display: none;
+  /* list-style-type: none;
+  gap: 1rem;
+
+  padding-inline: 1rem; */
+}
+
+.nav-restaurant ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* hero */
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  min-height: 500px;
+  width: 100%;
+  background-image: url("../public/images/heros/hero-image_2.jpg");
+  background-position: center;
+  background-color: green;
+  background-size: cover;
+}
+
+.hero-text {
+  margin: auto;
+  color: white;
+  text-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+  font-size: 2rem;
+}
+
+/* restaurant */
+
+.explore-restaurant {
+  margin: 6rem 1rem;
+}
+
+.restaurant-header {
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 32px;
+}
+.restaurant-header::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #263a29;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.restaurants {
+  margin: 50px auto auto;
+  text-align: left;
+
+  /* untuk nanti di media query */
+  /* display: flex; */
+  /* width: 80%; */
+  /* gap: 50px; */
+}
+
+.restaurant-item {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 16px 0;
+}
+
+.restaurant-item__city {
+  margin: 32px 0;
+  position: absolute;
+  z-index: 100;
+  background-color: #7aa874;
+  color: white;
+  width: 150px;
+  padding: 20px;
+  border-radius: 0 10px 10px 0;
+}
