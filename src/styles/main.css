@@ -15,42 +15,55 @@ img {
   width: 100%;
 }
 
-/* navbar */
+a {
+  text-decoration: none;
+}
 
-nav {
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* navbar */
+.nav {
   display: flex;
   background-color: #41644a;
-  padding: 16px;
-  justify-content: space-between;
+  padding: 10px;
+  justify-content: space-around;
   align-items: center;
 }
 
-.nav-brand a {
-  text-decoration: none;
-}
-
-.nav-brand a h1 {
+.nav-title__toggle {
+  font-size: 30px;
   color: white;
-  margin: 0;
-}
-
-.nav-restaurant a {
-  color: white;
-  font-size: 2rem;
-}
-
-.nav-restaurant ul {
+  background: transparent;
+  border-color: transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
   display: none;
-  /* list-style-type: none;
-  gap: 1rem;
-
-  padding-inline: 1rem; */
 }
 
-.nav-restaurant ul li a {
+.nav-title__text {
   color: white;
-  text-decoration: none;
-  /* padding: 10px 20px; */
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.nav-title {
+  display: flex;
+}
+
+.nav-item {
+  display: flex;
+  gap: 6rem;
+}
+
+.nav-item li {
+  display: inline;
+}
+.nav-item li a {
+  color: white;
 }
 
 /* hero */
@@ -59,8 +72,7 @@ nav {
   display: flex;
   align-items: center;
   text-align: center;
-  /* min-height: 500px; */
-  height: 90vh;
+  height: 91vh;
   width: 100%;
   background-image: url("../public/images/heros/hero-image_2.jpg");
   background-position: center;
@@ -71,7 +83,7 @@ nav {
 .hero-text {
   margin: auto;
   color: white;
-  text-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+  text-shadow: 0px 5px 4px rgba(0, 0, 0, 1);
   font-size: 1.5rem;
 }
 
@@ -116,7 +128,7 @@ nav {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  margin: 16px 0;
+  /* margin: 16px 0; */
 }
 
 .restaurant-item__city {
@@ -155,7 +167,6 @@ nav {
 }
 
 .restaurant-item__title a {
-  text-decoration: none;
   color: inherit;
 }
 
