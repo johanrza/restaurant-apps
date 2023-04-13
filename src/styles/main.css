@@ -27,8 +27,13 @@ nav {
 
 .nav-brand a {
   text-decoration: none;
-  color: white;
 }
+
+.nav-brand a h1 {
+  color: white;
+  margin: 0;
+}
+
 .nav-restaurant a {
   color: white;
   font-size: 2rem;
@@ -45,7 +50,7 @@ nav {
 .nav-restaurant ul li a {
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 
 /* hero */
@@ -54,7 +59,8 @@ nav {
   display: flex;
   align-items: center;
   text-align: center;
-  min-height: 500px;
+  /* min-height: 500px; */
+  height: 90vh;
   width: 100%;
   background-image: url("../public/images/heros/hero-image_2.jpg");
   background-position: center;
@@ -66,7 +72,7 @@ nav {
   margin: auto;
   color: white;
   text-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 /* restaurant */
@@ -119,7 +125,49 @@ nav {
   z-index: 100;
   background-color: #7aa874;
   color: white;
-  width: 150px;
-  padding: 20px;
-  border-radius: 0 10px 10px 0;
+  padding: 10px 20px 10px 10px;
+  border-radius: 0 20px 20px 0;
+}
+
+.restaurant-item__image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.restaurant-item__content {
+  width: 100%;
+  padding: 16px 10px;
+}
+
+.restaurant-item__rating {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-variant: small-caps;
+}
+
+.restaurant-item__title {
+  transition: 0.3s opacity;
+}
+
+.restaurant-item__title:hover {
+  opacity: 0.5;
+}
+
+.restaurant-item__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.restaurant-item__description {
+  line-height: 1.5em;
+}
+
+/* footer */
+footer {
+  padding: 16px;
+  color: white;
+  background-color: #41644a;
+  text-align: center;
+  font-weight: bold;
 }
