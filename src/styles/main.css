@@ -43,11 +43,8 @@ main {
   display: none;
 }
 
-.nav-title__text {
-  color: white;
-  font-size: 25px;
-  font-weight: bold;
-  padding: 10px;
+.nav-title__image {
+  width: 150px;
 }
 
 .nav-title {

@@ -44,6 +44,12 @@
     display: block;
   }
 
+  .nav-title__image {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+  }
+
   .nav-title {
     width: 100%;
     justify-content: space-between;
@@ -78,5 +84,9 @@
 
   .hero-text {
     font-size: 2rem;
+  }
+
+  .restaurant-item__content {
+    padding: 16px 30px;
   }
 }
