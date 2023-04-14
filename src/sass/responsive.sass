@@ -11,6 +11,10 @@
   .nav-item
     display: none
 
+  .nav-title__image
+    margin-left: 5%
+    margin-right: 5%
+
   .show_nav
     padding-top: 2%
     display: flex
@@ -37,6 +41,8 @@
     transition: all 0.3s linear
     cursor: pointer
     display: block
+    min-height: 44px
+    min-width: 44px
 
   .nav-title__image
     margin-top: auto
@@ -48,14 +54,14 @@
     justify-content: space-between
     margin: 0
 
-@media screen and (min-width: 500px)
+@media screen and (min-width: 700px)
   .restaurants
     display: grid
     grid-template-columns: 1fr 1fr
     grid-column-gap: 10px
     grid-row-gap: 16px
 
-@media screen and (min-width: 800px)
+@media screen and (min-width: 1070px)
   .restaurants
     display: grid
     grid-template-columns: 1fr 1fr 1fr
@@ -67,9 +73,13 @@
 
   .hero-image
     max-height: 500px
+    max-width: 1255px
+    margin-left: auto
+    margin-right: auto
+    border-radius: 0 0 10px 10px
 
   .hero-text
-    font-size: 2rem
+    font-size: 1.5rem
 
   .restaurant-item__content
     padding: 16px 30px
