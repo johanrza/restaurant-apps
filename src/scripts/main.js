@@ -10,7 +10,7 @@ const main = () => {
           <img class="restaurant-item__image" src="${pictureId}" alt="Picture of ${name} restaurant in ${city} city" />
           <div class="restaurant-item__content">
             <p class="restaurant-item__rating">Rating: ${rating}</p>
-            <h1 class="restaurant-item__title"><a href="#">${name}</a></h1>
+            <h2 class="restaurant-item__title"><a href="#">${name}</a></h2>
             <p class="restaurant-item__description">${description}</p>
           </div>
           </article>`;
