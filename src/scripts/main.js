@@ -1,10 +1,13 @@
-import data from "../DATA.json";
+import data from '../DATA.json';
+
 const main = () => {
   const getData = () => {
-    const listItem = document.querySelector(".restaurants");
-    listItem.innerHTML = "";
+    const listItem = document.querySelector('.restaurants');
+    listItem.innerHTML = '';
 
-    data.restaurants.forEach(({ name, description, pictureId, city, rating }) => {
+    data.restaurants.forEach(({
+      name, description, pictureId, city, rating,
+    }) => {
       listItem.innerHTML += `<article class="restaurant-item">
       <p class="restaurant-item__city">${city} City</p>
           <img class="restaurant-item__image" src="${pictureId}" alt="Picture of ${name} restaurant in ${city} city" />
@@ -16,7 +19,7 @@ const main = () => {
           </article>`;
     });
   };
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener('DOMContentLoaded', () => {
     getData();
   });
 };
