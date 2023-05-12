@@ -1,24 +1,19 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/main.css';
 import '../sass/responsive.sass';
-import main from './main';
+import App from './views/app';
 
-const navToggle = document.querySelector('.nav-title__toggle');
-const links = document.querySelector('.nav-item');
-const mainEL = document.querySelector('main');
-const hero = document.querySelector('.hero-image');
-
-navToggle.addEventListener('click', (event) => {
-  links.classList.toggle('show_nav');
-  event.stopPropagation();
+const app = new App({
+  button: document.querySelector('.nav-title__toggle'),
+  drawer: document.querySelector('.nav-item'),
+  content: document.querySelector('main'),
+  body: document.querySelector('body'),
 });
 
-mainEL.addEventListener('click', () => {
-  links.classList.remove('show_nav');
+window.addEventListener('hashchange', () => {
+  app.renderPage();
 });
 
-hero.addEventListener('click', () => {
-  links.classList.remove('show_nav');
+window.addEventListener('load', () => {
+  app.renderPage();
 });
-
-main();
