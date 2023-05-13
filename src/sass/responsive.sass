@@ -2,7 +2,7 @@
   display: grid
   grid-row-gap: 16px
 
-@media screen and (max-width: 700px)
+@media screen and (max-width: 699px)
   .nav
     display: flex
     flex-direction: column
@@ -63,6 +63,17 @@
     grid-template-columns: 1fr 1fr
     grid-column-gap: 10px
     grid-row-gap: 16px
+
+  .restaurant-detail
+    margin: auto
+    max-width: 800px
+    display: grid
+    grid-template-columns: 0.9fr auto
+    column-gap: 15px
+
+  .restaurant-detail__title, .restaurant-detail__menus, .restaurant-detail__description
+    grid-column-start: 1
+    grid-column-end: 3
 
 @media screen and (min-width: 1070px)
   .restaurants
