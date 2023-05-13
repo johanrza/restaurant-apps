@@ -1,4 +1,4 @@
-import data from '../../../DATA.json';
+import RestaurantResource from '../../data/restaurant-source';
 import createRestaurantItem from '../template/template-creator';
 
 const Home = {
@@ -12,8 +12,10 @@ const Home = {
   },
 
   async afterRender() {
+    const restaurants = await RestaurantResource.listRestaurant();
+
     const restorantsContainer = document.querySelector('.restaurants');
-    data.restaurants.forEach((restaurant) => {
+    restaurants.forEach((restaurant) => {
       restorantsContainer.innerHTML += createRestaurantItem(restaurant);
     });
   },
