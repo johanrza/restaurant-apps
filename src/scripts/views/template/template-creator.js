@@ -59,17 +59,14 @@ const createDetailRestaurant = (restaurant) => `
 const createDetailRestaurantComments = (restaurant) => `
   <h3>Customer Reviews</h3>
   <form id="comment-form">
+  <input type="text" id="input-id" name="comment-id" value="${restaurant.id}" hidden required />
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+      <input type="text" id="input-name" required />
     </div>
     <div class="form-group">
-      <label for="comment">Comment:</label>
-      <textarea id="comment" name="comment" required></textarea>
-    </div>
-    <div class="form-group">
-      <label for="date">Date:</label>
-      <input type="date" id="date" name="date" required />
+      <label for="input-comment">Comment:</label>
+      <textarea id="input-comment" required></textarea>
     </div>
     <div class="form-group">
       <input type="submit" value="Submit" />
