@@ -17,6 +17,13 @@ if (heroStatus === 'hidden' && hero) {
   hero.style.display = 'none';
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.location.hash === '') {
+    hero.style.display = '';
+    localStorage.setItem('heroStatus', 'visible');
+  }
+});
+
 window.addEventListener('hashchange', () => {
   if (document.location.hash.includes('detail')) {
     if (hero) {
