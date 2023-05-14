@@ -10,11 +10,22 @@ const app = new App({
   body: document.querySelector('body'),
 });
 
+const heroStatus = localStorage.getItem('heroStatus');
+const hero = document.querySelector('#hero');
+
+if (heroStatus === 'hidden' && hero) {
+  hero.style.display = 'none';
+}
+
 window.addEventListener('hashchange', () => {
-  const hero = document.querySelector('#hero');
-  hero.style.display = '';
   if (document.location.hash.includes('detail')) {
-    if (hero) hero.style.display = 'none';
+    if (hero) {
+      hero.style.display = 'none';
+      localStorage.setItem('heroStatus', 'hidden');
+    }
+  } else if (hero) {
+    hero.style.display = '';
+    localStorage.setItem('heroStatus', 'visible');
   }
   app.renderPage();
 });
