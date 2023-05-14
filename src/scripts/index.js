@@ -11,6 +11,11 @@ const app = new App({
 });
 
 window.addEventListener('hashchange', () => {
+  const hero = document.querySelector('#hero');
+  hero.style.display = '';
+  if (document.location.hash.includes('detail')) {
+    if (hero) hero.style.display = 'none';
+  }
   app.renderPage();
 });
 
