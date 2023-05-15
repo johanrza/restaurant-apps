@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('hashchange', () => {
-  if (document.location.hash.includes('detail')) {
+  if (document.location.hash.includes('detail') || document.location.hash.includes('favorite')) {
     if (hero) {
       hero.style.display = 'none';
       localStorage.setItem('heroStatus', 'hidden');

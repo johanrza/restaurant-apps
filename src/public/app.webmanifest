@@ -1,7 +1,7 @@
 {
   "id": "explore-restaurants-lite-pwa-1",
   "theme_color": "black",
-  "background_color": "##263A29",
+  "background_color": "#263A29",
   "display": "standalone",
   "start_url": "./index.html",
   "name": "Explore Restaurants App",

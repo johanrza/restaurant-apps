@@ -59,7 +59,7 @@ const createDetailRestaurant = (restaurant) => `
 const createDetailRestaurantComments = (restaurant) => `
   <h3>Customer Reviews</h3>
   <form id="comment-form">
-  <input type="text" id="input-id" name="comment-id" value="${restaurant.id}" hidden required />
+  <input type="text" id="input-id" value="${restaurant.id}" hidden required />
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" id="input-name" required />
@@ -83,4 +83,22 @@ const createDetailRestaurantComments = (restaurant) => `
   </div>
 `;
 
-export { createDetailRestaurant, createRestaurantItem, createDetailRestaurantComments };
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+    <i class="fa fa-heart-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <i class="fa fa-heart" aria-hidden="true"></i>
+  </button>
+`;
+
+export {
+  createDetailRestaurant,
+  createRestaurantItem,
+  createDetailRestaurantComments,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};

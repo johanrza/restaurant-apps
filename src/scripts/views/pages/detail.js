@@ -4,12 +4,14 @@ import {
   createDetailRestaurant,
   createDetailRestaurantComments,
 } from '../template/template-creator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const Detail = {
   async render() {
     return `
     <section id="restaurant-detail" class="restaurant-detail"></section>
     <section id="comments" class="comment-box"></section>
+    <div id="likeButtonContainer"></div>
     `;
   },
 
@@ -29,6 +31,22 @@ const Detail = {
         name: document.querySelector('#input-name').value,
         review: document.querySelector('#input-comment').value,
       });
+    });
+
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: {
+        id: restaurant.id,
+        name: restaurant.name,
+        description: restaurant.description,
+        city: restaurant.city,
+        address: restaurant.address,
+        pictureId: restaurant.pictureId,
+        categories: restaurant.categories,
+        menus: restaurant.menus,
+        rating: restaurant.rating,
+        customerReviews: restaurant.customerReviews,
+      },
     });
   },
 };
