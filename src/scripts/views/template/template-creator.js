@@ -5,9 +5,9 @@ const createRestaurantItem = (restaurant) => `
       <p class="restaurant-item__city">${restaurant.city} City</p>
       <img class="restaurant-item__image" src="${
   CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId
-}" alt="Picture of ${restaurant.name} restaurant in ${
+}" alt="${restaurant.name} restaurant in ${
   restaurant.city
-} city" />
+} city" crossorigin="anonymous"/>
       <div class="restaurant-item__content">
         <p class="restaurant-item__rating">Rating: ${restaurant.rating}</p>
         <h2 class="restaurant-item__title"><a href="/#/detail/${
@@ -19,7 +19,7 @@ const createRestaurantItem = (restaurant) => `
 
 const createDetailRestaurant = (restaurant) => `
   <h2 class="restaurant-detail__title">${restaurant.name}</h2>
-  <img class="restaurant-detail__image" src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" alt="Picture of ${restaurant.name} restaurant">
+  <img class="restaurant-detail__image" src="${CONFIG.BASE_IMAGE_URL_LARGE + restaurant.pictureId}" crossorigin="anonymous" alt="${restaurant.name} restaurant">
   <div class="restaurant-detail__info">
     <h3>Information</h3>
     <h4>City</h4>
@@ -59,7 +59,7 @@ const createDetailRestaurant = (restaurant) => `
 const createDetailRestaurantComments = (restaurant) => `
   <h3>Customer Reviews</h3>
   <form id="comment-form">
-  <input type="text" id="input-id" value="${restaurant.id}" hidden required />
+  <input type="text" id="input-id" value="${restaurant.id}" required />
     <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" id="input-name" required />

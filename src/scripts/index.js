@@ -11,6 +11,15 @@ const app = new App({
   body: document.querySelector('body'),
 });
 
+const skipLink = document.querySelector('.skip-link');
+const mainContent = document.querySelector('#maincontent');
+
+skipLink.addEventListener('click', (event) => {
+  event.preventDefault();
+  mainContent.scrollIntoView({ behavior: 'smooth' });
+  skipLink.blur();
+});
+
 const heroStatus = localStorage.getItem('heroStatus');
 const hero = document.querySelector('#hero');
 

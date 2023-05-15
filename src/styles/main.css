@@ -32,11 +32,22 @@ main {
   background-color: #bf1722;
   color: white;
   padding: 8px;
-  z-index: 100;
+  z-index: 101;
 }
 
 .skip-link:focus {
   top: 0;
+}
+
+.form-group {
+  padding: 10px 0;
+}
+
+#input-id {
+  display: none;
+}
+#input-name {
+  min-height: 44px;
 }
 
 /* navbar */
@@ -308,8 +319,8 @@ main {
 }
 
 .comment-box input[type='text'],
-.comment-box textarea,
-.comment-box input[type='date'] {
+.comment-box textarea {
+  display: inline-block;
   padding: 10px;
   margin-bottom: 10px;
   width: 100%;
@@ -324,13 +335,13 @@ main {
 }
 
 .comment-box input[type='submit'] {
+  font-size: 16px;
   background-color: #4caf50;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
