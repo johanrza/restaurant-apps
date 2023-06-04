@@ -1,9 +1,11 @@
 import CONFIG from '../../globals/config';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 const createRestaurantItem = (restaurant) => `
     <article class="restaurant-item">
       <p class="restaurant-item__city">${restaurant.city} City</p>
-      <img class="restaurant-item__image" src="${
+      <img class="lazyload restaurant-item__image" data-src="${
   CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId
 }" alt="${restaurant.name} restaurant in ${
   restaurant.city

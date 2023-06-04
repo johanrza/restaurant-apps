@@ -7,7 +7,10 @@
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "test": "karma start",
-    "e2e": "codeceptjs run --steps"
+    "serve": "http-server dist --port 9000",
+    "e2e": "codeceptjs run --steps",
+    "build-image": "node sharp.js",
+    "build-serve": "npm run build && npm run build-image && npm run serve"
   },
   "keywords": [],
   "author": "Johan R",
@@ -23,6 +26,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "jasmine-ajax": "^4.0.0",
@@ -36,6 +40,7 @@
     "puppeteer": "^20.5.0",
     "sass": "^1.62.0",
     "sass-loader": "^13.2.2",
+    "sharp": "^0.32.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
@@ -45,6 +50,7 @@
   },
   "dependencies": {
     "idb": "^7.1.1",
+    "lazysizes": "^5.3.2",
     "regenerator-runtime": "^0.13.9"
   }
 }
