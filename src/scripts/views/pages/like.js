@@ -1,3 +1,4 @@
+/* eslint-disable no-new */
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import FavoriteRestaurantSearchView from './liked-restaurants/favorite-restaurant-search-view';
 import FavoriteRestaurantShowPresenter from './liked-restaurants/favorite-restaurant-show-presenter';

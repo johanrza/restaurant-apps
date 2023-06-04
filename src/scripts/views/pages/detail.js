@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import UrlParser from '../../routes/url-parser';
 import RestaurantResource from '../../data/restaurant-source';
 import {
