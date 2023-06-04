@@ -25,12 +25,28 @@ const Detail = {
     comments.innerHTML += await createDetailRestaurantComments(restaurant);
 
     const buttonComment = document.querySelector('#comment-form');
-    buttonComment.addEventListener('submit', async () => {
-      await RestaurantResource.postReview({
-        id: document.querySelector('#input-id').value,
-        name: document.querySelector('#input-name').value,
-        review: document.querySelector('#input-comment').value,
-      });
+    buttonComment.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      try {
+        await RestaurantResource.postReview({
+          id: document.querySelector('#input-id').value,
+          name: document.querySelector('#input-name').value,
+          review: document.querySelector('#input-comment').value,
+        });
+
+        Swal.fire({
+          title: 'Success!',
+          text: 'Your review has send to server',
+          icon: 'success',
+          confirmButtonText: 'OK',
+        });
+      } catch (error) {
+        Swal.fire({
+          title: 'Gagal!',
+          icon: 'warning',
+          confirmButtonText: 'OK',
+        });
+      }
     });
 
     LikeButtonInitiator.init({

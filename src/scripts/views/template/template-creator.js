@@ -69,7 +69,7 @@ const createDetailRestaurantComments = (restaurant) => `
       <textarea id="input-comment" required></textarea>
     </div>
     <div class="form-group">
-      <input type="submit" value="Submit" />
+      <button id="buttonSubmit" type="submit">Submit</button>
     </div>
   </form>
   <div id="comments-list">

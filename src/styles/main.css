@@ -344,7 +344,7 @@ main {
   color: #333;
 }
 
-.comment-box input[type='submit'] {
+.comment-box button {
   font-size: 16px;
   background-color: #4caf50;
   color: white;
@@ -355,7 +355,7 @@ main {
   transition: background-color 0.3s ease;
 }
 
-.comment-box input[type='submit']:hover {
+.comment-box button:hover {
   background-color: #3e8e41;
 }
 
