@@ -9,6 +9,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 img {
@@ -48,6 +51,11 @@ main {
 }
 #input-name {
   min-height: 44px;
+}
+
+#query {
+  position: absolute; 
+  left: -9999px;
 }
 
 /* navbar */
@@ -157,7 +165,6 @@ main {
 }
 
 .restaurants {
-  margin: 50px auto auto;
   text-align: left;
 }
 
@@ -406,4 +413,5 @@ footer {
   background-color: #41644a;
   text-align: center;
   font-weight: bold;
+  margin-top: auto;
 }
